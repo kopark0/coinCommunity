@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 주기적으로 실행할 job을 등록한다 JDFB -->
+	<bean id="myjob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<!-- 스케줄러로 실행할 job을 구현한 클래스를 넣어준다 -->
+		<property name="jobClass" value="batchProgram.batchProgram.MyJob"></property>
+	</bean>
+
+	<!-- pattern : 어느정도의 간격으로 실행할지 적용한다 -->
+	<bean id="myjobFB" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="myjob"></property>
+		
+		<!-- 반복 주기 설정 -->
+		<property name="cronExpression" value="30/5 * * * * ?"></property>
+	</bean>
+	
+	<!-- 스케줄러를 통해 실행 할 것을 등록 SFB -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers" ref="myjobFB"></property>
+	</bean>
+	
+</beans>
