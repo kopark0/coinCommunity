@@ -1,0 +1,25 @@
+@charset "UTF-8";
+ul{list-style: none;}
+div.a{
+	border: 1px solid black; 
+	margin-left: 300px;
+	margin-right: 300px; 
+}
+div.b{
+	position: relative;
+    padding: 13px 19px 11px 18px;
+    background-color: #fff;
+}
+td.title{
+	width: 100%;
+	
+}
+td.date{
+	padding-left: 8px;
+}
+table{
+    font-size: 14px;
+    line-height: 24px;
+    white-space: nowrap;
+    vertical-align: top;
+}
