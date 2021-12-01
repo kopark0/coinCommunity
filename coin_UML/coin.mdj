@@ -2188,12 +2188,12 @@
 										},
 										{
 											"_type": "ERDColumnView",
-											"_id": "AAAAAAF9c+lV2xEEUyE=",
+											"_id": "AAAAAAF9dAokkUdAEj8=",
 											"_parent": {
 												"$ref": "AAAAAAF9c+Vf2g/CHE8="
 											},
 											"model": {
-												"$ref": "AAAAAAF9c+lV0hEBwSk="
+												"$ref": "AAAAAAF9dAokhUc9Y0c="
 											},
 											"font": "Arial;13;0",
 											"left": 29,
@@ -4733,13 +4733,13 @@
 						},
 						{
 							"_type": "ERDColumn",
-							"_id": "AAAAAAF9c+lV0hEBwSk=",
+							"_id": "AAAAAAF9dAokhUc9Y0c=",
 							"_parent": {
 								"$ref": "AAAAAAF9c+Vf2g++EBw="
 							},
-							"name": "content",
-							"type": "VARCHAR",
-							"length": "100"
+							"name": "reg_date",
+							"type": "TIMESTAMP",
+							"length": 0
 						},
 						{
 							"_type": "ERDColumn",

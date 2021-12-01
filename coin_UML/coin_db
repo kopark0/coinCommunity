@@ -132,7 +132,7 @@ CREATE TABLE `DOGE_board` (
     `nickname` VARCHAR(45) NOT NULL,
     `title` VARCHAR(45) NOT NULL,
     `content` VARCHAR(100) NOT NULL,
-    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL,
     `views` INTEGER,
     `recommend` INTEGER,
     PRIMARY KEY (`id`)
