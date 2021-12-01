@@ -1,0 +1,184 @@
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS `member`;
+DROP TABLE IF EXISTS `BTC_board`;
+DROP TABLE IF EXISTS `ETH_board`;
+DROP TABLE IF EXISTS `BNB_board`;
+DROP TABLE IF EXISTS `USDT_board`;
+DROP TABLE IF EXISTS `SOL_board`;
+DROP TABLE IF EXISTS `ADA_board`;
+DROP TABLE IF EXISTS `XRP_board`;
+DROP TABLE IF EXISTS `DOT_board`;
+DROP TABLE IF EXISTS `USDC_board`;
+DROP TABLE IF EXISTS `DOGE_board`;
+DROP TABLE IF EXISTS `notice_board`;
+DROP TABLE IF EXISTS `FAQ_board`;
+DROP TABLE IF EXISTS `service_board`;
+DROP TABLE IF EXISTS `comment`;
+SET FOREIGN_KEY_CHECKS = 1;
+
+CREATE TABLE `member` (
+    `id` VARCHAR(45) NOT NULL,
+    `password` VARCHAR(45) NOT NULL,
+    `nickname` VARCHAR(45) NOT NULL,
+    `email` VARCHAR(45) NOT NULL,
+    `hobby` VARCHAR(45),
+    `Interest` VARCHAR(45),
+    `seed` VARCHAR(45),
+    PRIMARY KEY (`id`),
+    UNIQUE (`nickname`)
+);
+
+CREATE TABLE `BTC_board` (
+    `id` INTEGER NOT NULL,
+    `nickname` VARCHAR(45) NOT NULL,
+    `title` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL,
+    `views` INTEGER,
+    `recommend` INTEGER,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `ETH_board` (
+    `id` INTEGER NOT NULL,
+    `nickname` VARCHAR(45) NOT NULL,
+    `title` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL,
+    `views` INTEGER,
+    `recommend` INTEGER,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `BNB_board` (
+    `id` INTEGER NOT NULL,
+    `nickname` VARCHAR(45) NOT NULL,
+    `title` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL,
+    `views` INTEGER,
+    `recommend` INTEGER,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `USDT_board` (
+    `id` INTEGER NOT NULL,
+    `nickname` VARCHAR(45) NOT NULL,
+    `title` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL,
+    `views` INTEGER,
+    `recommend` INTEGER,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `SOL_board` (
+    `id` INTEGER NOT NULL,
+    `nickname` VARCHAR(45) NOT NULL,
+    `title` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL,
+    `views` INTEGER,
+    `recommend` INTEGER,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `ADA_board` (
+    `id` INTEGER NOT NULL,
+    `nickname` VARCHAR(45) NOT NULL,
+    `title` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL,
+    `views` INTEGER,
+    `recommend` INTEGER,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `XRP_board` (
+    `id` INTEGER NOT NULL,
+    `nickname` VARCHAR(45) NOT NULL,
+    `title` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL,
+    `views` INTEGER,
+    `recommend` INTEGER,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `DOT_board` (
+    `id` INTEGER NOT NULL,
+    `nickname` VARCHAR(45) NOT NULL,
+    `title` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL,
+    `views` INTEGER,
+    `recommend` INTEGER,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `USDC_board` (
+    `id` INTEGER NOT NULL,
+    `nickname` VARCHAR(45) NOT NULL,
+    `title` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL,
+    `views` INTEGER,
+    `recommend` INTEGER,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `DOGE_board` (
+    `id` INTEGER NOT NULL,
+    `nickname` VARCHAR(45) NOT NULL,
+    `title` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `views` INTEGER,
+    `recommend` INTEGER,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `notice_board` (
+    `nickname` VARCHAR(45) NOT NULL,
+    `titile` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL,
+    `views` INTEGER
+);
+
+CREATE TABLE `FAQ_board` (
+    `nickname` VARCHAR(45) NOT NULL,
+    `title` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL,
+    `views` INTEGER
+);
+
+CREATE TABLE `service_board` (
+    `nickname` VARCHAR(45) NOT NULL,
+    `title` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL,
+    `views` INTEGER
+);
+
+CREATE TABLE `comment` (
+    `nickname` VARCHAR(45) NOT NULL,
+    `content` VARCHAR(100) NOT NULL,
+    `reg_date` TIMESTAMP NOT NULL
+);
+
+ALTER TABLE `BTC_board` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
+ALTER TABLE `ETH_board` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
+ALTER TABLE `BNB_board` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
+ALTER TABLE `USDT_board` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
+ALTER TABLE `SOL_board` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
+ALTER TABLE `ADA_board` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
+ALTER TABLE `XRP_board` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
+ALTER TABLE `DOT_board` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
+ALTER TABLE `USDC_board` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
+ALTER TABLE `DOGE_board` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
+ALTER TABLE `notice_board` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
+ALTER TABLE `FAQ_board` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
+ALTER TABLE `service_board` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
+ALTER TABLE `comment` ADD FOREIGN KEY (`nickname`) REFERENCES `member`(`nickname`);
