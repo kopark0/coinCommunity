@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+/*프레임*/
+.top{margin: 0 auto; border: 1px solid white; width: 70%; height: 210px;}
+.under{margin: 0 auto; border: 1px solid white; width: 50%; margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	height: 100%;
+}
+.foot{margin: 0 auto; border: 1px solid white; width: 70%; height: 150px; margin-top: 10px;}
+
+a{Text-decoration: none; color: inherit;}
+
+/*상단*/
+/*이미지 dbit 로그인*/
+.abc{display:flex;}
+.img1{position: absolute; left: 40%; top: 7%; }
+.div1{position: absolute; left: 45%; top: 8%; font-size: 40px;}
+.div2{position: absolute; left: 70%; top: 4%;}
+
+/*게시판*/
+
+.div3 {
+	width: 24.5%;
+	height: 50px;
+	color: white;
+	background-color: rgb(78, 78, 78);
+	text-align: center;
+	font-size: 20px;
+	line-height: 50px;
+	margin-top: 150px;
+	display: inline-block;
+}
+
+/* 중간 */
+
+/* 베스트게시물 */
+.u_div4{border: 1px solid white; padding: 5px 0px; font-size: 1.5em; }
+.u_img1{width: 24px; }
+.u_div5{border: 1px solid black; height: 100%; }
+td.title{width: 40%; text-align: center; }
+td.nickname{width: 10%; text-align: center; }
+td.recommend{width: 10%; text-align: center; } 
+
+
+/*하단*/
+/*박스*/
+.div5 {
+	background-color:#dcdcdc;
+	width: 60%;
+	height: 60px;
+	text-align:center;
+	color: gray;
+	font-size: 15px;
+	line-height: 25px;
+	padding-top: 20px;
+	position: absolute;left: 20%;
+	margin-top: 5px;
+	padding-bottom: 5px;
+}
+
+/*글자*/
+.lastfont1{
+	margin-left:200px;
+	margin-right: 160px;
+}
+.lastfont2{
+	margin-left:180px;
+	margin-right: 160px;
+}
+
+</style>
+<body>
+	<div class="top">
+        <div class="abc">
+            <img src="/img/piggy_bank.png" class="img1" alt="file not found">
+		    <div class="div1"><a href=""> D - BIT</a></div>
+		    <div class="div2">
+			    <a href="" style="text-decoration: none; color: blue;">로그인/아웃</a>ㅣ<a href=""
+				    style="text-decoration: none; color: blue;">마이페이지</a>
+		    </div>
+        </div>
+        <div class="sec2">
+            <div class="div3">게시판</div>
+            <div class="div3">게시판</div>
+            <div class="div3">고객센터</div>
+            <div class="div3">공지사항</div>
+        </div>
+    </div>
+
+    <div class="under">
+		<!-- 검색창 -->
+		<div class="u_div1">
+			검색창
+		</div>
+		<!-- 코인정보 -->
+		<div class="u_div2">
+			코인정보
+		</div>
+		<!-- 베스트 게시물 -->
+		<div class="u_div3">
+			<div class="u_div4">
+				<img src="/img/crown.png"  class="u_img1" alt="file not found"> 베스트 게시물
+			</div>
+			<div class="u_div5">
+				<table>
+					<!-- for문 돌릴예정 -->
+					<tbody>
+						<tr>
+							<td class="title">title</td>
+							<td class="nickname">nickname</td>
+							<td class="recommend">recommend</td>
+						</tr>
+						<tr>
+							<td class="title">title</td>
+							<td class="nickname">nickname</td>
+							<td class="recommend">recommend</td>
+						</tr>
+						<tr>
+							<td class="title">title</td>
+							<td class="nickname">nickname</td>
+							<td class="recommend">recommend</td>
+						</tr>
+						<tr>
+							<td class="title">title</td>
+							<td class="nickname">nickname</td>
+							<td class="recommend">recommend</td>
+						</tr>
+						<tr>
+							<td class="title">title</td>
+							<td class="nickname">nickname</td>
+							<td class="recommend">recommend</td>
+						</tr>
+						<tr>
+							<td class="title">title</td>
+							<td class="nickname">nickname</td>
+							<td class="recommend">recommend</td>
+						</tr>
+						<tr>
+							<td class="title">title</td>
+							<td class="nickname">nickname</td>
+							<td class="recommend">recommend</td>
+						</tr>
+						<tr>
+							<td class="title">title</td>
+							<td class="nickname">nickname</td>
+							<td class="recommend">recommend</td>
+						</tr>
+						<tr>
+							<td class="title">title</td>
+							<td class="nickname">nickname</td>
+							<td class="recommend">recommend</td>
+						</tr>
+						<tr>
+							<td class="title">title</td>
+							<td class="nickname">nickname</td>
+							<td class="recommend">recommend</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+    <br>
+    <hr>
+    <div class="foot">
+        <div class="sec6">
+			<div class="div5">
+				<a href="">공지사항</a> <a href=""class="lastfont1">고객센터</a> <a href="">개인정보처리방침</a> <br>
+				<a href="">자주 묻는 질문</a> <a href=""class="lastfont2">저작권</a> <a href="">대표번호: 1588-1111</a> 
+			</div>
+		</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>main_board</title>
+</head>
+<style>
+/*프레임*/
+.top{margin: 0 auto; border: 1px solid white; width: 70%; height: 210px;}
+
+.foot{margin: 0 auto; border: 1px solid white; width: 70%; height: 150px; margin-top: 10px;}
+
+a{Text-decoration: none; color: inherit;}
+
+/*상단*/
+    /*이미지 dbit 로그인*/
+    .abc{display:flex;}
+    .img1{position: absolute; left: 40%; top: 7%; }
+    .div1{position: absolute; left: 45%; top: 8%; font-size: 40px;}
+    .div2{position: absolute; left: 70%; top: 4%;}
+
+/*게시판*/
+.div3 {
+	width: 24.5%;
+	height: 50px;
+	color: white;
+	background-color: rgb(78, 78, 78);
+	text-align: center;
+	font-size: 20px;
+	line-height: 50px;
+	margin-top: 150px;
+	display: inline-block;
+}
+
+/* 중단 프레임*/
+    /* 게시판 프레임 side_A_under*/
+    .side_A_under{
+        margin: 0 auto;
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
+        align-items: baseline;
+    }
+    .side_A{
+        width: 20%;
+        height: 600px;
+        border: 2px solid black;
+        border-radius: 1mm;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+    .side_A_div1{
+        text-align: center;
+        border: 1px rgb(156, 155, 155) solid;
+        border-top: none; border-left: none ; border-right: none;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    /* 중단 게시물 프레임*/
+    .under{
+        border: 1px solid white;
+        width: 60%;
+        margin-top: 10px;
+        margin-left: 4%;
+        display: flex;
+        flex-direction: column;
+    }
+    /* 게시판 이름 u_div1 */
+    .u_div1{
+        border: 2px solid black;
+        font-size: 12pt;
+        border-radius: 1mm;
+        background-color: black;
+        color: white;
+        margin-bottom: 5px;
+        height: 30px;
+    }
+    /* 글 상단 (작성자, 닉네임) u_div2 */
+    .u_div2{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .u_div2_A{width: 30%; }
+    .u_div2_B{width: 40%; }
+    .u_div2_C{width: 20%; text-align: right; }
+    .under hr{border: 1px solid gainsboro; width: 100%; margin: 3px auto; }
+    /* 글 중단 (제목) u_div3 */
+    .u_div3{font-size: 14pt; }
+    .u_input3{width: 80%; height: 23px; border-radius: 2mm; }
+    .u_div3 span{font-size: 9pt; }
+
+    /* 글 하단 (글 작성란) u_div4 */
+    .u_div4{margin: 5px auto; padding: 0; }
+    .u_div4 textarea{
+        margin: 0px;
+        padding: 0px;
+        width: 90%;
+        height: 100%;
+        font-size: 12pt;
+        border-radius: 2mm;
+    }
+    /* 작성완료  u_div5 */
+    .u_div5{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .u_div5_A{margin-right: 10%; }
+
+/*하단*/
+    /*박스*/
+    .div5 {
+        background-color:#dcdcdc;
+        width: 60%;
+        height: 60px;
+        text-align:center;
+        color: gray;
+        font-size: 15px;
+        line-height: 25px;
+        padding-top: 20px;
+        position: absolute;left: 20%;
+        margin-top: 5px;
+        padding-bottom: 5px;
+    }
+
+/*글자*/
+.lastfont1{
+	margin-left:200px;
+	margin-right: 160px;
+}
+.lastfont2{
+	margin-left:180px;
+	margin-right: 160px;
+}
+
+
+</style>
+<body>
+    	<div class="top">
+        <div class="abc">
+            <img src="/img/piggy_bank.png" class="img1" alt="file not found">
+		    <div class="div1"><a href=""> D - BIT</a></div>
+		    <div class="div2">
+			    <a href="" style="text-decoration: none; color: blue;">로그인/아웃</a>ㅣ<a href=""
+				    style="text-decoration: none; color: blue;">마이페이지</a>
+		    </div>
+        </div>
+        <div class="sec2">
+            <div class="div3">게시판</div>
+            <div class="div3">게시판</div>
+            <div class="div3">고객센터</div>
+            <div class="div3">공지사항</div>
+        </div>
+    </div>
+
+    <!-- 왼쪽 게시판 목록 side A -->
+    <div class="side_A_under">
+        <div class="side_A">
+            <div class="side_A_div1"><a href="">비트코인(BTC)</a></div>
+            <div class="side_A_div1"><a href="">이더리움(ETH)</a></div>
+            <div class="side_A_div1"><a href="">바이낸스코인(BNB)</a></div>
+            <div class="side_A_div1"><a href="">테더(USDT)</a></div>
+            <div class="side_A_div1"><a href="">솔라나(SOL)</a></div>
+            <div class="side_A_div1"><a href="">에이다(ADA)</a></div>
+            <div class="side_A_div1"><a href="">리플(XRP)</a></div>
+            <div class="side_A_div1"><a href="">폴카닷(DOT)</a></div>
+            <div class="side_A_div1"><a href="">USD코인(USDC)</a></div>
+            <div class="side_A_div1"><a href="">도지코인(DOGE)</a></div>
+        </div>
+
+        <!-- 중단 under -->
+        <div class="under">
+            <!-- 게시판 이름 -->
+            <div class="u_div1">
+                <a href=""><img src="" class="u_img1" alt="file not found"> 게시판 이름</a>
+            </div>
+            <!-- 글 상단 (작성자, 닉네임 ) -->
+            <div class="u_div2">
+                <div class="u_div2_A">작성자</div>
+                <div class="u_div2_B">닉네임</div>
+            </div>
+            <hr>
+            <!-- 글 중단 (제목)-->
+            <div class="u_div3">
+                제목 : <input type="text" name="title" class="u_input3" placeholder="제목을 작성해주세요.">
+            </div>
+            <!-- 글 하단 (글 작성란) -->
+            <div class="u_div4">
+                <textarea name="content" cols="110" rows="20"placeholder="내용을 작성해주세요."></textarea>
+            </div>
+            <!-- 작성완료 -->
+            <div class="u_div5">
+                <div class="u_div5_A"><button type="submit">작성완료</button></div>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <div class="foot">
+        <div class="sec6">
+			<div class="div5">
+				<a href="">공지사항</a> <a href=""class="lastfont1">고객센터</a> <a href="">개인정보처리방침</a> <br>
+				<a href="">자주 묻는 질문</a> <a href=""class="lastfont2">저작권</a> <a href="">대표번호: 1588-1111</a> 
+			</div>
+		</div>
+    </div>
+</body>
+</html>
