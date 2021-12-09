@@ -2,7 +2,7 @@
 <html lang="kr">
 <head>
     <meta charset="UTF-8">
-    <title>main_board</title>
+    <title>main_boardOneByForm</title>
 </head>
 <style>
 /*프레임*/
@@ -83,7 +83,7 @@ a{Text-decoration: none; color: inherit;}
         margin-bottom: 5px;
         height: 30px;
     }
-    /* 글 상단 (닉네임, 작성자, 조회수 ) u_div2 */
+    /* 글 상단 (닉네임, 작성일자, 조회수 ) u_div2 */
     .u_div2{
         display: flex;
         flex-direction: row;
@@ -118,12 +118,36 @@ a{Text-decoration: none; color: inherit;}
         display: flex;
         flex-direction: row;
         align-content: flex-start;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
     }
-    .u_div6_A{width: 20%; text-align: left; font-size: 9pt; }
-    .u_div6_B{width: 40%; text-align: right; }
-
+    .u_div6_A{
+        width: 50px;
+        height: 17px;
+        font-size: 9pt;
+        background-color: grey;
+        border-radius: 1mm;
+        color: white;
+    }
+    .u_div6_A_1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .u_div6_B, .u_div6_C{
+        width: 90px;
+        height: 29px;
+        background-color: grey;
+        border-radius: 2mm;
+        color: white;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2px;
+    }
 /*하단*/
     /*박스*/
     .div5 {
@@ -151,21 +175,20 @@ a{Text-decoration: none; color: inherit;}
 }
 /*댓글명록 섹션*/
 .div_border1 {
-	border: 2px solid gainsboro;
-	border-collapse: collapse;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	height: 200px;
-	margin-top: 10px;
+    border: 2px solid gainsboro;
+    border-collapse: collapse;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    margin-top: 10px;
 }	
 /*댓글쓰기 섹션*/
 .div_border2 {
-	background-color: hsla(219, 59%, 86%, 0.925);
-	flex-direction: row;
-	display: flex;
-	margin-top: 5px;
-	align-items: flex-start;
+    background-color: hsla(219, 59%, 86%, 0.925);
+    flex-direction: row;
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
 }
 /*댓글명록 섹션나눈 div들*/
 .border_div1 {
@@ -201,17 +224,16 @@ a{Text-decoration: none; color: inherit;}
 }
 /*댓글쓰기 등록*/
 .div_border2 .input2 {
-	background-color: grey;
-	color: white;
-	font-size: 28px;
-	border: none;
-	width: 70px;
-	height: 56px;
-	text-align: center;
-	font-weight: lighter;
-	border-radius: 10px;
-	margin-left: 20px;
-	margin-top: 10px;
+    background-color: grey;
+    color: white;
+    font-size: 28px;
+    border: none;
+    width: 70px;
+    height: 56px;
+    text-align: center;
+    font-weight: lighter;
+    border-radius: 10px;
+    margin-left: 20px;
 }
 span {
 	margin: 5px;
@@ -262,7 +284,7 @@ span {
             <div class="u_div1">
                 <a href=""><img src="" class="u_img1" alt="file not found"> 게시판 이름</a>
             </div>
-            <!-- 글 상단 (닉네임, 작성자, 조회수 ) -->
+            <!-- 글 상단 (닉네임, 작성일자, 조회수 ) -->
             <div class="u_div2">
                 <div class="u_div2_A">닉네임</div>
                 <div class="u_div2_B">작성일자</div>
@@ -288,8 +310,11 @@ span {
             </div>
             <!-- 신고하기, 삭제하기, 수정하기 -->
             <div class="u_div6">
-                <div class="u_div6_A">신고하기</div>
-                <div class="u_div6_B">삭제하기 수정하기</div>
+                <div class="u_div6_A"><a href="">신고하기</a></div>
+                <div class="u_div6_A_1">
+                    <div class="u_div6_B"><a href="">삭제하기</a></div>
+                    <div class="u_div6_C"><a href="">수정하기</a></div>
+                </div>
             </div>
 
             <!-- 댓글 -->

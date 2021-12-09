@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="main_boardCreateComp.html" name="frm" method="post" onsubmit="return frmsubmit();">
+    <input type="text" name="aaa">
+    <input type="submit" name="submit" value="서브밋">
+    </form>
+<script>
+    var myForm = document.frm;
+    var a = myForm.aaa;
+    function frmsubmit() {
+        
+        if(a.value == ""){
+            alert("aaa가 없어요");
+            return false;
+        }
+        return false;
+
+    }
+</script>
+</body>
+</html>
